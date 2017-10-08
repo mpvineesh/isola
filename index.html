@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">    
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="lib/player1.png">
+    <title>Isola</title>
+    <!-- Bootstrap core CSS -->
+    <link href="./lib/bootstrap.min.css" rel="stylesheet">
+    <link href="./lib/custom.css" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="./lib/starter-template.css" rel="stylesheet">
+</head>
+  <body>
+    <nav class="navbar navbar-toggleable-md navbar-inverse bg-inverse fixed-top">   
+      <a class="navbar-brand" href="#">Isola</a>
+	  <div class="container">
+	<div id="navbar" class="collapse navbar-collapse">
+		<ul class="nav navbar-nav">
+			<li class="active"><a href="#" data-toggle="modal" data-target="#instructions">Instructions</a></li> 
+		</ul>
+	</div><!--/.nav-collapse -->
+</div>
+    </nav>
+    <div class="container">
+		<div id="result"></div>
+		<div class="row">
+			<div class="col-md-6">
+					<div class="starter-template">
+						<div class="game-container"></div>	
+					</div>
+					<div class="row">
+					<div class="alert alert-danger" id="error-msg" style="display:none;">
+						<strong><span id="error"></span></strong>
+					</div>
+					</div>
+					<div class="row">
+						<div class="col-md-4" style="margin:auto;margin-top:10px;"><button class="btn btn-primary" id="done">Confirm your move</button></div>
+					  </div>
+			</div>
+			<div class="col-md-6">
+				<div id="steps" class="steps">
+				<h4 class="title">Instructions</h4>
+					<ul class="ins">
+		  <li>You are Player 1 (Green Icon).</li>
+		  <li>Randomly either Green or Red will get chance to play first.</li>
+		  <li>Step 1: Moving one's piece to a neighboring (horizontally, vertically, or diagonally) position that contains a square but not the opponent's piece</li>
+		  <li>Step 2 : Removing any square with no piece on it</li>
+		  <li>Step 3 : Click Confirm buttom to confirm your moves</li>
+		  <li>The player who cannot make any move loses the game.</li>
+		</ul>
+				</div>
+			</div>
+		 </div>
+		 <!--
+		<div class="starter-template">
+			<div class="game-container"></div>	
+		</div>
+		
+		<div class="row">
+		<div class="alert alert-danger" id="error-msg" style="display:none;">
+			<strong><span id="error"></span></strong>
+		</div>
+		</div>
+		<div class="row">
+			<div class="col-md-2" style="margin:auto;margin-top:10px;"><button class="btn btn-primary" id="done">Confirm your move</button></div>
+		  </div>
+	-->
+    </div><!-- /.container -->
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+	<!-- Placed at the end of the document so the pages load faster -->
+	<script src="./lib/jquery-1.12.4.js"></script> 
+	<script src="./lib/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+	<script src="./lib/bootstrap.min.js"></script>
+	<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+	<script src="./lib/ie10-viewport-bug-workaround.js"></script>
+	<script src="./lib/isola.js"></script>
+	<script src="./lib/jquery-ui.js"></script>  
+	
+	<!-- Modal -->
+  <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">    
+      <!-- Modal content-->
+      <div class="modal-content">
+       
+        <div class="modal-body">
+          <h1 id="result-text">Some text in the modal.</h1>
+        </div>
+    
+      </div>
+      
+    </div>
+  </div>
+  
+  
+   <!-- Modal -->
+  <div class="modal fade" id="instructions" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title" style="float:left;">Instructions</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        <div class="modal-body">
+		<ul class="ins">
+		  <li>You are Player 1 (Green Icon).</li>
+		  <li>Randomly either Green or Red will get chance to play first.</li>
+		  <li>Step 1: Moving one's piece to a neighboring (horizontally, vertically, or diagonally) position that contains a square but not the opponent's piece</li>
+		  <li>Step 2 : Removing any square with no piece on it</li>
+		  <li>Step 3 : Click Confirm buttom to confirm your moves</li>
+		  <li>The player who cannot make any move loses the game.</li>
+		</ul>
+		  </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+  
+	
+</body>
+</html>
